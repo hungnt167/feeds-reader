@@ -23,8 +23,8 @@ class AppModel extends Model
     protected static $fieldHasRFC822List = [
         "pubDate",
     ];
-    protected static $xmlFields = [];
 
+    public static $xmlFields = [];
     public static $identifyKeyName = "id";
     public static $foreignKeyName = "parent_id";
     public static $cliHeaders = ['Id'];

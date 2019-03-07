@@ -27,10 +27,10 @@ class News extends AppModel
     ];
 
     protected $casts = [
-        'pubDate' => 'datetime' //Carbon::RFC822,
+        'pubDate' => 'datetime:D, d M y g:i A' //Carbon::RFC822,
     ];
 
-    protected static $xmlFields = [
+    public static $xmlFields = [
         'title',
         'description',
         'pubDate',
@@ -38,7 +38,6 @@ class News extends AppModel
         'guid',
         'comments',
     ];
-
     public static $identifyKeyName = 'title';
     public static $foreignKeyName = 'channel_id';
     public static $cliHeaders = ['Id', 'Title', 'Published Date'];

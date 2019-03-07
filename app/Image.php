@@ -22,12 +22,11 @@ class Image extends AppModel
         'channel_id',
     ];
 
-    protected static $xmlFields = [
+    public static $xmlFields = [
         'title',
         'url',
         'link',
     ];
-
     public static $identifyKeyName = 'title';
     public static $foreignKeyName = 'channel_id';
     /**

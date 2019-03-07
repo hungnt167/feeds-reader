@@ -25,16 +25,16 @@ class Channel extends AppModel
     ];
 
     protected $casts = [
-        'pubDate' => 'datetime',
+        'pubDate' => 'datetime:D, d M y g:i A',
     ];
-    protected static $xmlFields = [
+
+    public static $xmlFields = [
         'title',
         'description',
         'pubDate',
         'generator',
         'link',
     ];
-
     public static $identifyKeyName = 'title';
     public static $cliHeaders = ['Id', 'Title', 'URL'];
     public static $cliColumns = ['id', 'title', 'link'];
