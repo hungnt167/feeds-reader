@@ -33,7 +33,7 @@ class NewsGrid extends Component {
      */
     channelTemplate(channel) {
         const newsList = _.chunk(channel.news_list, 2);
-        const imageUrl = channel.image.url;
+        const imageUrl = channel.image ? channel.image.url : "";
         return (
             newsList.map((newsSet, index) => (
                 <div className="col-md-6 jasgrid" key={index}>
